@@ -2,4 +2,4 @@
 
 str = "Holberton School"
 
-print(3 * str+'\n'+str[0:9]);
+print(3 * str+'\n'+str[0:9])
