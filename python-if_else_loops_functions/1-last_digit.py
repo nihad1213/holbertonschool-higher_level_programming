@@ -7,7 +7,7 @@ if number < 0:
 else:
     lastDigit = number % 10
 
-print("Last digit of", number, "is", lastDigit, end = ' ')
+print("Last digit of", number, "is", lastDigit, end=' ')
 
 if lastDigit < 5 and lastDigit != 0:
     print("and is less than 6 and not 0")
