@@ -4,8 +4,8 @@ def max_integer(my_list=[]):
     if len(my_list) == 0:
         return None
     else:
-        max_ = my_list[0]
+        _max = my_list[0]
         for x in my_list:
-            if x > max_
+            if x > _max
 
-        print("Max: {:d}".format(max_))
+        print("Max: {:d}".format(_max))
