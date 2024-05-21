@@ -8,3 +8,6 @@ def uniq_add(my_list=[]):
 
     for i in range(0, len(new_new_list)):
         sum = sum + new_new_list[i]
+        converted_sum = int(sum)
+
+    return converted_sum
