@@ -2,8 +2,7 @@
 
 def uniq_add(my_list=[]):
     new_list = set(my_list)
-    new_new_list = list(new_list)
-    
+    new_new_list = list(new_list) 
     if len(new_new_list) == 0:
         return 0
     sum = 0
