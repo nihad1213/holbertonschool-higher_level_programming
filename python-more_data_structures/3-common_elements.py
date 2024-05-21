@@ -18,3 +18,5 @@ def common_elements(set_1, set_2):
     common_element_ = [i for i in common_element if common_element[i] == 2]
     if len(common_element_) > 0:
         return common_element_
+    else:
+        return []
