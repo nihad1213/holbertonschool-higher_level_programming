@@ -8,7 +8,7 @@ def common_elements(set_1, set_2):
             common_element[i] += 1
         else:
             common_element[i] = 1
-    
+ 
     for i in set_2:
         if i in common_element:
             common_element[i] += 1
