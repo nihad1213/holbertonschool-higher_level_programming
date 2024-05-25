@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Sepultura - Roots bloody roots"""
 
+
 class Square:
     """Square class"""
 
@@ -12,4 +13,3 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = size
-
