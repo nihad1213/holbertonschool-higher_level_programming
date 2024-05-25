@@ -3,11 +3,11 @@
 
 
 class Square:
-    """square class"""
+    """Square class"""
 
     def __init__(self, size=0):
-        """initialization method"""
-        if type(size) != int:
+        """Initialization method"""
+        if not isinstance(size, int):
             raise TypeError('size must be an integer')
         if size < 0:
             raise ValueError('size must be >= 0')
@@ -15,5 +15,5 @@ class Square:
             self.__size = size
 
     def area(self):
-        """square value"""
-        return (self.__size**2)
+        """Calculate the area of the square"""
+        return self.__size ** 2
