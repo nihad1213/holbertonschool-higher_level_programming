@@ -1,4 +1,4 @@
 #!/usr/bin/python3
 class Square:
-    """as"""
+    """Empty class that defines a square"""
     pass
