@@ -59,4 +59,3 @@ class Square:
             for line in range(self.size):
                 print(' ' * a, end='')
                 print('#' * self.size)
-
