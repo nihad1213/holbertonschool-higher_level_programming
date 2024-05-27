@@ -1,5 +1,31 @@
-1 items had no tests:
-    0-add_integer.txt
-0 tests in 1 items.
-0 passed and 0 failed.
-Test passed.
+"""
+    >>> add_integer(2, 3)
+    5
+    >>> add_integer(2.5, 3.5)
+    5
+    >>> add_integer(2, 3.5)
+    5
+    >>> add_integer(2.5, 3)
+    5
+    >>> add_integer('2', 3)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer(2, '3')
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+    >>> add_integer(2.5, '3.5')
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer('2', '3')
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+    >>> add_integer(2.5)
+    100
+    >>> add_integer(2)
+    100
+"""
+
