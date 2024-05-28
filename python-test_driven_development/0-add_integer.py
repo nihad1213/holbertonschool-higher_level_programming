@@ -3,6 +3,7 @@
     Add integer
 """
 
+
 def add_integer(a, b=98):
     """Add integer"""
     if type(a) is not float and type(a) is not int:
@@ -15,4 +16,3 @@ def add_integer(a, b=98):
         b = int(b)
 
     return (a + b)
-
