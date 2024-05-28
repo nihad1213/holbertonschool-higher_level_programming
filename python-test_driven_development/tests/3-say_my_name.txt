@@ -1,0 +1,91 @@
+
+""" test n°1 - import """
+---------------------
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+
+""" test n°2 """
+	first_name -> string.
+	last_name -> string.
+---------------------
+>>> say_my_name("Frank", "Quispe")
+My name is Frank Quispe
+
+
+
+""" test n°3 """
+	first_name -> string.
+	last_name -> Nothing.
+---------------------
+>>> say_my_name("Frank")
+My name is Frank 
+
+
+
+""" test n°4 """
+	first_name -> Nothing.
+	last_name -> Nothing.
+---------------------
+>>> say_my_name()
+Traceback (most recent call last):
+TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
+
+
+""" test n°5 """
+        first_name -> string.
+        last_name -> integer.
+---------------------
+>>> say_my_name("Frank", 69)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+
+
+""" test n°5 """
+        first_name -> integer.
+        last_name -> Nothing.
+---------------------
+>>> say_my_name(13)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+
+
+""" test n°6 """
+        first_name -> None.
+        last_name -> Nothing.
+---------------------
+>>> say_my_name(None)
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+
+
+""" test n°7 """
+        first_name -> string.
+        last_name -> None.
+---------------------
+>>> say_my_name("Frank", None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+
+
+""" test n°8 """
+        first_name -> string.
+        last_name -> string.
+	additional -> string
+---------------------
+>>> say_my_name("Frank", "Quispe", "Pacheco")
+Traceback (most recent call last):
+TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+
+
+""" test n°9 """
+        first_name -> string.
+        last_name -> string.
+---------------------
+>>> say_my_name("", "")
+My name is  
