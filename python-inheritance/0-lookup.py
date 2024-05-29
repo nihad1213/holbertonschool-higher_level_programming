@@ -5,5 +5,3 @@
 def lookup(obj):
     """Class"""
     return [i for i in dir(obj)]
-
-
