@@ -1,10 +1,13 @@
 #!/usr/bin/python3
 class CountedIterator:
-"""
-    Class
-"""
+    """A class that extends the built-in iterator to count iterations"""
 
     def __init__(self, some_iterable):
+        """Initializes the CountedIterator.
+
+        Args:
+            some_iterable (iterable): Any iterable object (e.g., list, tuple).
+        """
         self.iterator = iter(some_iterable)
         self.count = 0
 
