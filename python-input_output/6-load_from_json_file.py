@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Holy Wars"""
 
+
 import json
 
 def load_from_json_file(filename):
