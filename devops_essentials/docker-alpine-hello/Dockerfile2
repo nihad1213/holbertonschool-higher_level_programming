@@ -1,0 +1,8 @@
+# Use the Alpine base image
+FROM alpine:latest
+
+# Install the curl package
+RUN apk add --no-cache curl
+
+# Copy the configuration file into the container
+COPY config.txt /app/config.txt

@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: mydatabase
+      POSTGRES_USER: myuser
+      POSTGRES_PASSWORD: mypassword
+    networks:
+      - pg_network
+
+  admin:
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: myemail@example.com
+      PGADMIN_DEFAULT_PASSWORD: mypassword
+      PGADMIN_LISTEN_PORT: 5050
+      PGADMIN_DEFAULT_SERVER: db
+    depends_on:
+      - db
+    ports:
+      - "5050:5050"
+    networks:
+      - pg_network
+
+networks:
+  pg_network:
+    driver: bridge
