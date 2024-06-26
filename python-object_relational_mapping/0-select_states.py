@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""lists all for state.id"""
-
+"""List fot state.id"""
 import MySQLdb
 from sys import argv
 
