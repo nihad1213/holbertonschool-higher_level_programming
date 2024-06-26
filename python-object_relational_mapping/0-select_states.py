@@ -1,3 +1,6 @@
+#!/usr/bin/python3
+"""List for state.id"""
+
 import MySQLdb
 from sys import argv
 
