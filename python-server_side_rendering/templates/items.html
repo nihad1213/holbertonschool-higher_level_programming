@@ -30,11 +30,17 @@
             <a href="/items">Items</a>
         </nav>
     </header>
-
-{% for i in items %}
+{% if items %}
     <ul>
-        <li>{{ i }}</li>
+        {% for i in items %}
+            <li>{{ i }}</li>
+        {% endfor %}
     </ul>
-{% endfor %}
+{% else %}
+    <ul>
+        <li><p style="color: red;">Error: Items list is empty!</p></li>
+    </ul>
+{% endif %}
+
 
 {% include "footer.html" %}
