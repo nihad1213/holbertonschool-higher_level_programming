@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 import json
+
 app = Flask(__name__)
 
 # Route for index.html file
@@ -18,7 +19,7 @@ def contact():
     return render_template("contact.html")
 
 # Route for items.html file
-@app.route('/items', strict_slashes=False)
+@app.route('/items')
 def items():
     with open('items.json', 'r') as f:
         itemsData = json.load(f)
