@@ -1,0 +1,1 @@
+# Python tasks about Server side rendering
