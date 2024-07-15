@@ -19,12 +19,13 @@ def contact():
     return render_template("contact.html")
 
 # Route for items.html file
-@app.route('/items')
+@app.route('/items', strict_slashes=False)
 def items():
     with open('items.json', 'r') as f:
         items_data = json.load(f)
     items_list = items_data['items']
     return render_template('items.html', items=items_list)
+
 
 if __name__ == "__main__":
     app.run(debug=True, port=5000)
