@@ -1,0 +1,8 @@
+Hello John Doe,
+
+You are invited to the Conference on 2024-07-15 at New York.
+
+We look forward to your presence.
+
+Best regards,
+Event Team

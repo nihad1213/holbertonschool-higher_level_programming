@@ -5,6 +5,10 @@ def generate_invitations(template_content, attendees):
     if not isinstance(template_content, str):
         return 'Template is not a string'
     
+    # Check if template content is empty
+    if not template_content.strip():
+        return 'Template file is empty'
+    
     # Check if attendees is a list
     if not isinstance(attendees, list):
         return 'Attendees need to be a list of dictionaries'
@@ -29,30 +33,25 @@ def generate_invitations(template_content, attendees):
         print(f"Generated {output_filename}")
 
 if __name__ == "__main__":
-    # Read the template file content
-    template_file = "template.txt"
+    # Assuming attendees list is defined here
+    attendees = [
+        {"name": "John Doe", "event_title": "Conference", "event_date": "2024-07-15", "event_location": "New York"},
+        {"name": "Jane Smith", "event_title": "Seminar", "event_date": "2024-07-16", "event_location": "Los Angeles"}
+    ]
 
-    # If there is not template.txt file
+    # Rest of your code remains the same
+    template_file = "template.txt"
     if not os.path.exists(template_file):
         print('Template file does not exist')
         exit(1)
 
-    # Check template file is empty or not
     if os.path.getsize(template_file) == 0:
         print('Template file is empty')
         exit(1)
 
-
     with open(template_file, 'r') as file:
         template_content = file.read()
 
-    # List of attendees
-    attendees = [
-        {"name": "Alice", "event_title": "Python Conference", "event_date": "2023-07-15", "event_location": "New York"},
-        {"name": "Bob", "event_title": "Data Science Workshop", "event_date": "2023-08-20", "event_location": "San Francisco"},
-        {"name": "Charlie", "event_title": "AI Summit", "event_date": None, "event_location": "Boston"}
-    ]
-    
     # Call the function with the template content and attendees list
     result = generate_invitations(template_content, attendees)
     if result is not None:
