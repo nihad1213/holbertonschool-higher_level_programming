@@ -19,19 +19,12 @@ def contact():
     return render_template("contact.html")
 
 # Route for items.html file
-@app.route('/items', strict_slashes=False)
+@app.route('/items', strict_slashes=True)
 def items():
-    try:
-        with open('items.json', 'r') as f:
-            items_data = json.load(f)
-        items_list = items_data['items']
-        return render_template('items.html', items=items_list)
-    except FileNotFoundError:
-        return "Error: Could not find items.json", 404
-    except KeyError:
-        return "Error: Missing 'items' key in items.json", 500
-    except Exception as e:
-        return f"Error: {str(e)}", 50
+    with open('items.json', 'r') as f:
+        items_data = json.load(f)
+    items_list = items_data['items']
+    return render_template('items.html', itemss=items_list)
 
 
 if __name__ == "__main__":
