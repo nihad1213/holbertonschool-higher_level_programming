@@ -31,16 +31,20 @@ def generate_invitations(template_content, attendees):
 if __name__ == "__main__":
     # Read the template file content
     template_file = "template.txt"
+
+    # If there is not template.txt file
     if not os.path.exists(template_file):
         print('Template file does not exist')
         exit(1)
-    
-    with open(template_file, 'r') as file:
-        template_content = file.read()
 
+    # Check template file is empty or not
     if os.path.getsize(template_file) == 0:
         print('Template file is empty')
         exit(1)
+
+
+    with open(template_file, 'r') as file:
+        template_content = file.read()
 
     # List of attendees
     attendees = [
