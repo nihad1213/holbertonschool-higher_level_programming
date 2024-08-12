@@ -1,0 +1,1 @@
+# Tasks about Python - Everything is object
